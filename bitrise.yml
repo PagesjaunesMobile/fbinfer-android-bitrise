@@ -14,7 +14,6 @@ workflows:
     - path::./:
         title: Infer
         inputs:
-          - infer_debug_mode: "true"
           - infer_source_dir: /Users/antoinetaourirt/Documents/Projets/androidMobileDeviceManager
 
   # ----------------------------------------------------------------

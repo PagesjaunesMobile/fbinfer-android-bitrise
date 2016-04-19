@@ -9,8 +9,17 @@ else
 	echo "infer_source_dir: this is required"
 	exit 1
 fi
+if [[ -n "${infer_gradle_task}" ]]; then
+	echo "infer_gradle_task: ${infer_gradle_task}"
+else
+	echo "infer_gradle_task: this is required"
+	exit 1
+fi
 if [[ -n "${infer_debug_mode}" ]]; then
 	echo "infer_debug_mode: ${infer_debug_mode}"
+else
+	echo "infer_debug_mode: this is required"
+	exit 1
 fi
 echo "============================="
 echo ""
@@ -25,6 +34,6 @@ cd "${infer_source_dir}"
 #
 # # Execute Infer
 ./gradlew clean
-infer -- ./gradlew assemble
+infer -- ./gradlew "${infer_gradle_task}"
 
 exit 0

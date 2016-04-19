@@ -22,7 +22,10 @@ run_if: true
 inputs:
   - infer_debug_mode: "false"
     opts:
-      title: FbInfer Debug
+      title: Debug Mode
+      summary: ""
+      description: |
+        If you want to see what command are send to the system.
       is_required: true
       value_options:
       - "true"
@@ -30,4 +33,8 @@ inputs:
   - infer_source_dir: $BITRISE_SOURCE_DIR
     opts:
       title: Path of the source directory
+      is_required: true
+  - infer_gradle_task: assemble
+    opts:
+      title: Gradle task to run
       is_required: true
