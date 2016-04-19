@@ -13,7 +13,3 @@ Modify your `bitrise.yml` in order to test it.
           - infer_gradle_task: Gradle task to run
           - infer_debug_mode: Set it to true if you want to see what command are send to the system
 ```
-
-# Milestone
-
-* 0.1.0
