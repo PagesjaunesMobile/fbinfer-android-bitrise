@@ -12,7 +12,7 @@ workflows:
             set -x
             set
     - path::./:
-        title: Infer
+        title: Infer for Android
         inputs:
           - infer_source_dir: /Users/antoinetaourirt/Documents/Projets/androidMobileDeviceManager
 
@@ -21,10 +21,10 @@ workflows:
   share-this-step:
     envs:
       # if you want to share this step into a StepLib
-      - MY_STEPLIB_REPO_FORK_GIT_URL: https://github.com/ataourirt/fbinfer-android-bitrise.git
+      - MY_STEPLIB_REPO_FORK_GIT_URL: git@github.com:ataourirt/fbinfer-android-bitrise.git
       - STEP_ID_IN_STEPLIB: fbinfer-android
-      - STEP_GIT_VERION_TAG_TO_SHARE: 0.1.0
-      - STEP_GIT_CLONE_URL: https://github.com/ataourirt/fbinfer-android-bitrise.git
+      - STEP_GIT_VERION_TAG_TO_SHARE: 1.0.0
+      - STEP_GIT_CLONE_URL: git@github.com:ataourirt/fbinfer-android-bitrise.git
     description: |-
       If this is the first time you try to share a Step you should
       first call: $ bitrise share
