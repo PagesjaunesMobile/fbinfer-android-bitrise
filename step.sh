@@ -36,4 +36,11 @@ cd "${infer_source_dir}"
 ./gradlew clean
 infer -- ./gradlew "${infer_gradle_task}"
 
+export INFER_OUTPUT_FILE="$PWD/infer-out/report.json"
+echo ""
+echo "========== Outputs =========="
+echo "INFER_OUTPUT_FILE: ${INFER_OUTPUT_FILE}"
+echo "============================="
+echo ""
+
 exit 0
