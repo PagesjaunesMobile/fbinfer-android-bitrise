@@ -33,6 +33,7 @@ cd "${infer_source_dir}"
 
 #
 # # Execute Infer
+brew install infer
 ./gradlew clean
 infer -- ./gradlew "${infer_gradle_task}"
 
