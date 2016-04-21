@@ -5,13 +5,13 @@ description: |-
   This is not an officially supported plugin
 website: https://github.com/ataourirt/fbinfer-android-bitrise
 source_code_url: https://github.com/ataourirt/fbinfer-android-bitrise
-support_url: https://github.com/ataourirt/fbinfer-android-bitrise
+support_url: https://github.com/ataourirt/fbinfer-android-bitrise/issues
 host_os_tags:
-  - osx-10.10
+  - "ubuntu"
 project_type_tags:
-  - ios
+  - android
 type_tags:
-  - script
+  - gradle
 deps:
   brew:
   - name: infer
