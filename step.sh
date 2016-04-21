@@ -38,13 +38,13 @@ wget -O run.sh https://raw.githubusercontent.com/facebook/infer/master/docker/ru
 sh run.sh
 #
 # # Execute Infer
-# ./gradlew clean
-# infer -- ./gradlew "${infer_gradle_task}"
+./gradlew clean
+infer -- ./gradlew "${infer_gradle_task}"
 
-# export INFER_OUTPUT_FILE="$PWD/infer-out/report.json"
+export INFER_OUTPUT_FILE="$PWD/infer-out/report.json"
 echo ""
 echo "========== Outputs =========="
-# echo "INFER_OUTPUT_FILE: ${INFER_OUTPUT_FILE}"
+echo "INFER_OUTPUT_FILE: ${INFER_OUTPUT_FILE}"
 echo "============================="
 echo ""
 
