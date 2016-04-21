@@ -33,9 +33,9 @@ cd "${infer_source_dir}"
 
 #
 ## Install Infer
-# wget -O Dockerfile https://raw.githubusercontent.com/facebook/infer/master/docker/Dockerfile
-# wget -O run.sh https://raw.githubusercontent.com/facebook/infer/master/docker/run.sh
-# sh run.sh
+wget -O Dockerfile https://raw.githubusercontent.com/facebook/infer/master/docker/Dockerfile
+wget -O run.sh https://raw.githubusercontent.com/facebook/infer/master/docker/run.sh
+sh run.sh
 #
 # # Execute Infer
 # ./gradlew clean
