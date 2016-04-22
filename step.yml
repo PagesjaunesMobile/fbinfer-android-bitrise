@@ -28,11 +28,11 @@ inputs:
       value_options:
       - "true"
       - "false"
-  - infer_source_dir: $BITRISE_SOURCE_DIR
+  - infer_source_dir: "$BITRISE_SOURCE_DIR"
     opts:
       title: Path of the source directory
       is_required: true
-  - infer_gradle_task: assemble
+  - infer_gradle_task: "$GRADLE_TASK"
     opts:
       title: Gradle task to run
       is_required: true
