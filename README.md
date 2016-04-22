@@ -10,6 +10,6 @@ Modify your `bitrise.yml` in order to test it.
     - git::https://github.com/ataourirt/fbinfer-android-bitrise@master:
         inputs:
           - infer_source_dir: $BITRISE_SOURCE_DIR
-          - infer_gradle_task: Gradle task to run
+          - infer_gradle_task: $GRADLE_TASK
           - infer_debug_mode: Set it to true if you want to see what command are send to the system
 ```
