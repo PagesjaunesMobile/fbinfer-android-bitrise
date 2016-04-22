@@ -43,6 +43,8 @@ wget -O Dockerfile https://raw.githubusercontent.com/facebook/infer/v0.8.0/docke
 wget -O run.sh https://raw.githubusercontent.com/facebook/infer/v0.8.0/docker/run.sh
 sh run.sh
 
+ls
+
 #
 # # Execute Infer
 ./gradlew clean
