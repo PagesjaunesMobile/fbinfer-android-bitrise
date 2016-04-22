@@ -25,8 +25,10 @@ echo "============================="
 echo ""
 
 if [[ "${infer_debug_mode}" = true ]]; then
+	set -e
 	set -x
 fi
+
 #
 # go to project folder
 cd "${infer_source_dir}"
@@ -36,12 +38,14 @@ cd "${infer_source_dir}"
 wget -O Dockerfile https://raw.githubusercontent.com/facebook/infer/master/docker/Dockerfile
 wget -O run.sh https://raw.githubusercontent.com/facebook/infer/master/docker/run.sh
 sh run.sh
+
 #
 # # Execute Infer
 ./gradlew clean
 infer -- ./gradlew "${infer_gradle_task}"
 
 export INFER_ANDROID_OUTPUT_FILE="$PWD/infer-out/report.json"
+envman add --key INFER_ANDROID_OUTPUT_FILE --value "$PWD/infer-out/report.json"
 echo ""
 echo "========== Outputs =========="
 echo "INFER_ANDROID_OUTPUT_FILE: ${INFER_ANDROID_OUTPUT_FILE}"

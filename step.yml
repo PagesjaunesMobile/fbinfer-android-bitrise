@@ -12,6 +12,7 @@ project_type_tags:
   - android
 type_tags:
   - gradle
+  - static code analysis
 is_requires_admin_user: true
 is_always_run: true
 is_skippable: false
@@ -35,3 +36,7 @@ inputs:
     opts:
       title: Gradle task to run
       is_required: true
+outputs:
+  - INFER_ANDROID_OUTPUT_FILE:
+    opts:
+      title: Infer report file
