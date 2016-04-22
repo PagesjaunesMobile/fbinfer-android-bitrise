@@ -38,17 +38,16 @@ cd "${infer_source_dir}"
 # wget -O Dockerfile https://raw.githubusercontent.com/facebook/infer/master/docker/Dockerfile
 # wget -O run.sh https://raw.githubusercontent.com/facebook/infer/master/docker/run.sh
 
-# wget -O Dockerfile https://raw.githubusercontent.com/facebook/infer/2e5da306071e81f7daca90f788abd337a7561796/docker/Dockerfile
-wget -O Dockerfile https://raw.githubusercontent.com/facebook/infer/v0.8.0/docker/Dockerfile
-wget -O run.sh https://raw.githubusercontent.com/facebook/infer/v0.8.0/docker/run.sh
+wget -O Dockerfile https://raw.githubusercontent.com/facebook/infer/2e5da306071e81f7daca90f788abd337a7561796/docker/Dockerfile
+wget -O Dockerfile https://raw.githubusercontent.com/facebook/infer/2e5da306071e81f7daca90f788abd337a7561796/docker/run.sh
+# wget -O Dockerfile https://raw.githubusercontent.com/facebook/infer/v0.8.0/docker/Dockerfile
+# wget -O run.sh https://raw.githubusercontent.com/facebook/infer/v0.8.0/docker/run.sh
 sh run.sh
-
-ls
 
 #
 # # Execute Infer
 ./gradlew clean
-infer -- ./gradlew "${infer_gradle_task}"
+/infer/infer/bin/infer -- ./gradlew "${infer_gradle_task}"
 
 export INFER_ANDROID_OUTPUT_FILE="$PWD/infer-out/report.json"
 envman add --key INFER_ANDROID_OUTPUT_FILE --value "$PWD/infer-out/report.json"
