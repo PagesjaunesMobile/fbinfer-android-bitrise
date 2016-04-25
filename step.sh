@@ -42,7 +42,7 @@ wget -O Dockerfile https://raw.githubusercontent.com/facebook/infer/2e5da306071e
 wget -O run.sh https://raw.githubusercontent.com/facebook/infer/2e5da306071e81f7daca90f788abd337a7561796/docker/run.sh
 # wget -O Dockerfile https://raw.githubusercontent.com/facebook/infer/v0.8.0/docker/Dockerfile
 # wget -O run.sh https://raw.githubusercontent.com/facebook/infer/v0.8.0/docker/run.sh
-sh run.sh
+# sh run.sh
 
 tree ${INFER_HOME}
 tree ${PWD}
@@ -50,6 +50,7 @@ tree ${PWD}
 #
 # # Execute Infer
 ./gradlew clean
+docker build infer .
 docker run -i infer /bin/bash -c "infer -- ./gradlew \"${infer_gradle_task}\""
 
 export INFER_ANDROID_OUTPUT_FILE="$PWD/infer-out/report.json"
