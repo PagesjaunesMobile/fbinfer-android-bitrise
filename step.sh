@@ -44,10 +44,14 @@ wget -O Dockerfile https://raw.githubusercontent.com/facebook/infer/2e5da306071e
 # wget -O run.sh https://raw.githubusercontent.com/facebook/infer/v0.8.0/docker/run.sh
 sh run.sh
 
+tree /infer
+tree /bitrise/src
+tree ${PWD}
+
 #
 # # Execute Infer
 ./gradlew clean
-/infer/infer/bin/infer -- ./gradlew "${infer_gradle_task}"
+infer -- ./gradlew "${infer_gradle_task}"
 
 export INFER_ANDROID_OUTPUT_FILE="$PWD/infer-out/report.json"
 envman add --key INFER_ANDROID_OUTPUT_FILE --value "$PWD/infer-out/report.json"
