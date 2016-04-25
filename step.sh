@@ -46,17 +46,20 @@ cd "${infer_source_dir}"
 
 # sh run.sh
 
+brew update
 brew install opam
 opam init -y --comp=4.02.3
 
 wget -O infer-linux64.tar.xz https://github.com/facebook/infer/releases/download/v0.8.1/infer-linux64-v0.8.1.tar.xz
 tar xf infer-linux64.tar.xz
 cd infer-linux64-v0.8.1/
+
 eval $(opam config env)
 opam update
 opam pin add --yes --no-action infer .
 opam install --deps-only infer
 eval $(opam config env)
+
 ./build-infer.sh
 export PATH=`pwd`/infer/bin:$PATH
 
