@@ -50,7 +50,7 @@ tree ${PWD}
 #
 # # Execute Infer
 ./gradlew clean
-infer -- ./gradlew "${infer_gradle_task}"
+${INFER_HOME}/bin/infer -- ./gradlew "${infer_gradle_task}"
 
 export INFER_ANDROID_OUTPUT_FILE="$PWD/infer-out/report.json"
 envman add --key INFER_ANDROID_OUTPUT_FILE --value "$PWD/infer-out/report.json"
