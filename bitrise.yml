@@ -14,7 +14,8 @@ workflows:
     - path::./:
         title: Infer for Android
         inputs:
-          - infer_source_dir: /Users/antoinetaourirt/Documents/Projets/androidMobileDeviceManager
+          - infer_source_dir: /Users/jeffreymacko/project/androidMobileDeviceManager-master
+          - infer_gradle_task: assembleDebug
 
   # ----------------------------------------------------------------
   # --- workflows to Share this step into a Step Library
