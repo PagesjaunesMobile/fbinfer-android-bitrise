@@ -7,7 +7,7 @@ This step will use [FbInfer App](http://fbinfer.com) in order to check your code
 Modify your `bitrise.yml` in order to test it.
 
 ```yaml
-    - git::https://github.com/ataourirt/fbinfer-android-bitrise@master:
+    - git::https://github.com/PagesjaunesMobile/fbinfer-android-bitrise@master:
         inputs:
           - infer_source_dir: $BITRISE_SOURCE_DIR
           - infer_gradle_task: $GRADLE_TASK

@@ -3,9 +3,9 @@ summary: Step for Bitrise
 description: |-
   This is a Step for [FbInfer App](http://fbinfer.com).
   This is not an officially supported plugin
-website: https://github.com/ataourirt/fbinfer-android-bitrise
-source_code_url: https://github.com/ataourirt/fbinfer-android-bitrise
-support_url: https://github.com/ataourirt/fbinfer-android-bitrise/issues
+website: https://github.com/PagesjaunesMobile/fbinfer-android-bitrise
+source_code_url: https://github.com/PagesjaunesMobile/fbinfer-android-bitrise
+support_url: https://github.com/PagesjaunesMobile/fbinfer-android-bitrise/issues
 host_os_tags:
   - "ubuntu"
 project_type_tags:
